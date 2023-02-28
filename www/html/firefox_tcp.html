@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Firefoxのトータルクッキー保護導入に伴う設定変更の方法</title>
+</head>
+<body>
+<div style="margin: 20px">
+<p>2022年6月14日以降、Firefoxのトータルクッキー保護（Total Cookie Protection）が導入され、サンプルVMのデモが一部動かなくなっています。トータルクッキー保護については以下のリリース及び記事を参照ください。</p>
+<ul>
+  <li><a href="https://blog.mozilla.org/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/">Firefox Rolls Out Total Cookie Protection By Default To All Users</a></li>
+  <li><a href="https://forest.watch.impress.co.jp/docs/news/1417193.html">Mozilla、アンチトラッキング技術の集大成「包括的 Cookie 保護」をデスクトップ版「Firefox」で全面有効化 - 窓の杜</a></li>
+</ul>
+<p>今後サンプルVMのデモを従来どおり動作させるには、罠サイト（trap.example.com）にてトータルクッキー保護を無効化することで可能です。</p>
+<p>このページを見ている読者は既に trap.example.com ドメインをアクセスしています。この状態でアドレスバーの左端に「盾」のアイコンが表示されるのでそれをクリックします。下図の状態になります。</p>
+<img style="border: 1px #000000 solid;" src="track-on.png">
+<p>「強化型トラッキング防止機能はこのサイトでオンです」の横のスイッチをクリックして、オフに変更してください。下図のように盾アイコンに斜線が引かれた状態になるはずです。</p>
+<img style="border: 1px #000000 solid;" src="track-off.png">
+<p>この状態で特に危険になることはないはずですが、どうしても気になるようであれば、実習後に設定を戻しておくこともできます。</p>
+<p>設定変更後は、必ず<a href="http://example.jp/">example.jp</a>にアクセスして実習を始めてください。</p>
+</div>
+</body>
+</html>

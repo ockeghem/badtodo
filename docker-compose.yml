@@ -1,0 +1,76 @@
+version : "3.8"
+services:
+  db:
+    build: db
+    image: badtodo-db
+    container_name: badtodo-db
+    hostname: badtodo-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=wasbook
+      - TZ=Asia/Tokyo
+    command: mariadbd --general-log=1 --general-log-file=/var/lib/mysql/query.log
+    volumes:
+      - mysql-data-volume:/var/lib/mysql
+    networks:
+      internal:
+
+  apache:
+    build: apache
+    image: badtodo-apache
+    container_name: badtodo-apache
+    hostname: badtodo-apache
+    extra_hosts:
+      - "internal.example.jp:127.0.0.1"
+    environment:
+      - MYSQL_HOST=db
+      - TZ=Asia/Tokyo
+    volumes:
+      - ./www:/var/www
+    ports:
+      # PROXY(Forward PROXY)用ポート。環境変数 APACHE_PORXY_PORT によりカスタマイズ可能
+      - ${APACHE_IP:-127.0.0.1}:${APACHE_PROXY_PORT:-23128}:3128
+      # 以下はデバッグ用
+      # - ${APACHE_IP:-127.0.0.1}:${APACHE_WEB_PORT:-10080}:80
+    networks:
+      internal:
+    
+  nginx:
+    build: nginx
+    image: badtodo-nginx
+    container_name: badtodo-nginx
+    hostname: badtodo-nginx
+    ports:
+      - ${WEB_IP:-127.0.0.1}:${WEB_HTTP_PORT:-4080}:80
+      - ${WEB_IP:-127.0.0.1}:${WEB_HTTPS_PORT:-4443}:443
+    depends_on:
+      apache:
+        condition: service_started    
+      mail:
+        condition: service_started
+    networks:
+      internal:
+        aliases:
+          - example.jp
+          - todo.example.jp
+          - trap.example.org
+          # - internal.example.jp
+
+  mail:
+    build: mail
+    image: badtodo-mail
+    container_name: badtodo-mail
+    hostname: badtodo-mail
+    # この ports 指定はデバッグ用なので通常は指定しない
+    # ports:
+    #  - 127.0.0.1:3380:80
+    environment:
+      - HTTPPATH=/mail
+    networks:
+      internal:
+
+volumes:
+  mysql-data-volume:
+    name: badtodo-mysql
+
+networks:
+  internal:

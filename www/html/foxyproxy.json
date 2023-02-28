@@ -1,0 +1,60 @@
+{
+  "mode": "patterns",
+  "proxySettings": [
+    {
+      "title": "OWASP ZAP",
+      "type": 1,
+      "color": "#66cc66",
+      "address": "localhost",
+      "port": 58888,
+      "active": true,
+      "whitePatterns": [
+        {
+          "title": "example.jp",
+          "active": true,
+          "pattern": "*example.jp*",
+          "type": 1,
+          "protocols": 1
+        },
+        {
+          "title": "example.net",
+          "active": true,
+          "pattern": "*example.net*",
+          "type": 1,
+          "protocols": 1
+        },
+        {
+          "title": "example.com",
+          "active": true,
+          "pattern": "*example.com*",
+          "type": 1,
+          "protocols": 1
+        }
+      ],
+      "blackPatterns": [],
+      "id": "rzrpto1514368880560"
+    },
+    {
+      "active": true,
+      "title": "Default",
+      "notes": "These are the settings that are used when no patterns match a URL.",
+      "color": "#0055E5",
+      "type": 5,
+      "whitePatterns": [
+        {
+          "title": "all URLs",
+          "active": true,
+          "pattern": "*",
+          "type": 1,
+          "protocols": 1
+        }
+      ],
+      "blackPatterns": [],
+      "id": "k20d21508277536715"
+    }
+  ],
+  "logging": {
+    "active": true,
+    "maxSize": 500
+  }
+}

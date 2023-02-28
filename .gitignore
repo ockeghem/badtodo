@@ -1,0 +1,14 @@
+/.vscode/
+.env
+.DS_Store
+test*.php
+done.txt
+status.txt
+www/log/msmtp.log
+www/html/todo/temp/
+www/html/todo/attachment/
+www/html/todo/logs/
+www/html/todo/icons/
+www/html/todo/temp/
+www/html/todo/adminer.php
+www/html/todo/foxyproxy.json

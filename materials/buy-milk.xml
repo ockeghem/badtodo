@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<todolist>
+  <todo>
+    <owner>wasbook</owner>
+    <subject>牛乳を買う</subject>
+    <c_date>2023-1-25</c_date>
+    <due_date></due_date>
+    <done>0</done>
+    <public>0</public>
+  </todo>
+</todolist>
