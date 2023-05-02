@@ -18,13 +18,21 @@
 
 ## ライセンス
 
-本ソフトウェアの利用に関して
+### 本ソフトウェアの利用に関して
 - 本ソフトウェアの著作権は[徳丸浩](https://twitter.com/ockeghem/)に帰属します
 - 本ソフトウェアBad Todo Listは、非営利目的の個人のみ利用できます。営利目的での利用を希望される場合は[徳丸浩](https://twitter.com/ockeghem/)までご連絡ください。
 - 本ソフトウェアを変更して配布することはできません。
 - 本ソフトウェアの使用条件はクリエイティブ・コモンズ・ライセンスの下で配布を許可します。
 - クリエイティブ・コモンズ・ライセンスの詳細や表示については、[クリエイティブ・コモンズ・ジャパンのウェブサイト](http://creativecommons.jp)をご参照ください。 
 
+### 学校・教育機関での利用について
+以下のいずれかを満たす教育機関等では、申請いただければ、費用等の必要なくBad Todoをご利用いただけます。
+
+- 学校教育法で定められた学校およびその学校法人
+- 国および地方自治体で設立および管轄している大学校、大学共同利用機関
+- 公共職業能力開発施設および職業訓練法人
+
+詳しくは[こちらの利用申込みフォーム](https://docs.google.com/forms/d/e/1FAIpQLSdlQTG6t9V7JFpEfL0DHKvMzR98AsaDV3B997y3BMEutHmE-Q/viewform)記載内容をご確認の上、お申し込みください。
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />この 作品 は <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">クリエイティブ・コモンズ 表示 - 非営利 - 改変禁止 4.0 国際 ライセンス</a>の下に提供されています。
 
