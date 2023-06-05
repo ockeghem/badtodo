@@ -59,7 +59,7 @@
         <?php empty($result['url_text']) ? e($result['url']) : e($result['url_text']); ?></a></td>
       </tr>
       <tr>
-      <td>公開</td><td><?php e($result['public'] ? '公開' : '未公開'); ?></td>
+      <td>公開</td><td><?php e($result['public'] ? '公開' : '非公開'); ?></td>
       </tr>
       </table>
       <?php $app->form("edittodo.php", false, array('item' => $result['id'])); ?>

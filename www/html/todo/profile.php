@@ -1,6 +1,10 @@
 <?php
   require_once('./common.php');
+  $app->require_loggedin();
+  $id = $app->get_id();
   $reqid = filter_input(INPUT_GET, 'id');
+  if (empty($reqid))
+    $reqid = $id;
   $ok = true;
   try {
     $dbh = dblogin();

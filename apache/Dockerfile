@@ -1,13 +1,13 @@
 FROM httpd:bullseye
 ARG TARGETARCH
 RUN apt update \
-    && apt install -y msmtp msmtp-mta imgp \
+    && apt install -y msmtp msmtp-mta imgp libcurl3-gnutls \
     && mkdir -p /var/www/html/ \
     && mkdir -p /usr/local/libxml2.7.8/ \
     && mkdir -p /etc/php/5.3/cgi/
 
 # 以下はデバッグ用ツールのインストール（本番では必要なし）
-# RUN apt install -y vim-tiny less iputils-ping net-tools procps
+# RUN apt install -y vim-tiny less iputils-ping net-tools procps iproute2
 # デバッグ用終わり
 
 COPY httpd.conf /usr/local/apache2/conf/

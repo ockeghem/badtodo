@@ -118,3 +118,8 @@ if (! isset($nosession)) {
   $app = new BadApp();
   $app->check_login();
 }
+
+if (! empty($_SERVER['HTTP_ORIGIN'])) {
+  header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+  header('Access-Control-Allow-Credentials: true');
+}

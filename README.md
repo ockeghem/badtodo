@@ -10,7 +10,11 @@
 
 脆弱性診断で出てくるであろう基本的な脆弱性が網羅されているので、これを一通り習得すれば、あなたも立派な「脆弱性診断員」ではないでしょうかw
 
+改訂履歴は[CHANGELOG](./CHANGELOG.md)を参照ください。
+
 ## [インストール方法](docs/install.md)
+
+## [バージョンアップ方法](docs/versionup.md)
 
 ## [使い方](docs/usage.md)
 
@@ -45,6 +49,8 @@
 - MailCatcher: メール確認用ソフトウェア
 - Adminer: データベース管理ソフトウェア
 - Libxml2: XML解析ライブラリ
+- jQuery: JavaScriptライブラリ
+- DOMPurify: XSSサニタイズ用JavaScriptライブラリ
 
 これらソフトウェアについては、それぞれのライセンスに従います。
 

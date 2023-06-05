@@ -24,6 +24,44 @@
 
 コンテナ環境の www/html/trap/ フォルダに環境を用意してあります。ここに設置したファイルは、実習環境トップの「罠サイト（中身は実習にて作成）」からアクセスすることができます。
 
+# Nginxのキャッシュの削除
+
+Nginxのキャッシュがウザい場合がよくあります。キャッシュを削除するには以下のスクリプトが利用できます。
+
+### Windows(PowerShell)
+```
+PS C:badtodo> .\scripts\init.ps1
+```
+
+### Windows(CMD)
+```
+C:badtodo> .\scripts\init.bat
+```
+
+### Mac / Linux / WSL
+```
+$ ./scripts/init.sh
+```
+
+# 初期化用スクリプト
+
+コンテナを維持したままデータを初期化するには、以下のスクリプトが利用できます。
+
+### Windows(PowerShell)
+```
+PS C:badtodo> .\scripts\init.ps1
+```
+
+### Windows(CMD)
+```
+C:badtodo> .\scripts\init.bat
+```
+
+### Mac / Linux / WSL
+```
+$ ./scripts/init.sh
+```
+
 
 # ヒント
 ## ウェブ健康診断仕様をよく確認しよう

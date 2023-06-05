@@ -54,12 +54,11 @@
         type: "get",
         data: {"email": email},
         dataType: "json",
-        success: function(result){
-          if (result.ok) {
-            $("#out-email").html('')
-          } else {
-            $("#out-email").html(result.message)
-          }
+      }).done(function(result){
+        if (result.ok) {
+          $("#out-email").html('')
+        } else {
+          $("#out-email").html(result.message)
         }
       })
     })

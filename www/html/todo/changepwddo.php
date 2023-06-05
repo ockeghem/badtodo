@@ -3,7 +3,6 @@
   $app->require_loggedin();
   $token = filter_input(INPUT_POST, TOKENNAME);
   if ($token !== $app->get('token')) {
-    var_dump($token, $app->get('token'));
     error_exit('正規の画面から使用ください');
   }
   $id = $app->get_id();

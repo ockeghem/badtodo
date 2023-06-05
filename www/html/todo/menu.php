@@ -1,9 +1,10 @@
-<div id="header">
-  <h1><a href="index.php">Bad Todo List</a></h1>
+<?php
+  global $app;  // 状況により関数内から呼ばれる場合があるので global 宣言しておく
+?><div id="header">
+  <h1><?php $app->a('todolist.php', 'Bad Todo List'); ?></h1>
 </div><!-- /#header-->
 <div class="welcome">
 <?php
-  global $app;  // 状況により関数内から呼ばれる場合があるので global 宣言しておく
   if ($app->is_loggedin()) {
     $current_user = $app->get_userid();
     if ($app->is_super())

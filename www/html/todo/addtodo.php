@@ -41,7 +41,7 @@ $app->require_token();
 if (empty($todo)) {
   $errmsg[] = 'todoが空です';
 }
-if (! empty($url) && ! eregi("^[a-z]+:[-a-z0-9!?/+_~;.,*&@#$%()'[\]*$", $url)) {
+if (! empty($url) && ! eregi("^[a-z]+:[-a-z0-9:/?=#!&%+~;.,*@()'[-_]*$", $url)) {
   $errmsg[] = 'URLが不正です';
 }
 if (empty($url) && ! empty($url_text)) {
@@ -52,12 +52,8 @@ $real_filename = null;
 if ($attachment['error'] === 0) {
   $tmp_name = $attachment["tmp_name"];
   $org_filename = $attachment["name"];
-  if (safe_file($org_filename)) {
-    $real_filename = dechex(time()) . "-" . $org_filename;
-    move_uploaded_file($tmp_name, "attachment/$real_filename");
-  } else {
-    $errmsg[] = 'この拡張子のファイルはアップロードできません';
-  }
+  $real_filename = dechex(time()) . "-" . $org_filename;
+  move_uploaded_file($tmp_name, "attachment/$real_filename");
 }
 if (empty($errmsg)) {
   $errmsg = add_todo($app, $todo, $due_date, $memo, $org_filename, $real_filename, $url, $url_text, $public);

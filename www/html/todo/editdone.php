@@ -57,7 +57,7 @@ $realname = null;
 if (empty($todo)) {
   $errmsg[] = 'todoが空です';
 }
-if (! empty($url) && ! eregi("^[a-z]+:[-a-z0-9!?/+_~;.,*&@#$%()'[\]*$", $url)) {
+if (! empty($url) && ! eregi("^[a-z]+:[-a-z0-9:/?=#!&%+~;.,*@()'[-_]*$", $url)) {
   $errmsg[] = 'URLが不正です';
 }
 if (empty($url) && ! empty($url_text)) {

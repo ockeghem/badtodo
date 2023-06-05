@@ -47,12 +47,11 @@
         type: "get",
         data: {"id": userid},
         dataType: "json",
-        success: function(result){
-          if (result.ok) {
-            $("#out-id").html('')
-          } else {
-            $("#out-id").html(result.message)
-          }
+      }).done(function(result) {
+        if (result.ok) {
+          $("#out-id").html('')
+        } else {
+          $("#out-id").html(result.message)
         }
       })
     })
@@ -71,12 +70,11 @@
         type: "get",
         data: {"email": email},
         dataType: "json",
-        success: function(result){
-          if (result.ok) {
-            $("#out-email").html('')
-          } else {
-            $("#out-email").html(result.message)
-          }
+      }).done(function(result) {
+        if (result.ok) {
+          $("#out-email").html('')
+        } else {
+          $("#out-email").html(result.message)
         }
       })
     })

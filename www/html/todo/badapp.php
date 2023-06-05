@@ -62,7 +62,6 @@ class BadApp extends DbSessionManager {
   public function require_loggedin() {
     if (! $this->is_loggedin()) {
       $user = $this->new_user();
-      $app = $this;
       $current = $_SERVER['SCRIPT_NAME'];
       $title = "ログアウトしています";
       $content = 'この操作にはログインが必要です <a href="login.php?url=' . h($current) . '">ログイン</a>';
@@ -167,4 +166,4 @@ class BadApp extends DbSessionManager {
       }
     }
   }
-} // End BadSession
+} // End BadApp

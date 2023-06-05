@@ -57,6 +57,8 @@ li {
    padding:0 20px;
    border:1px solid #CECFCE;
    background-color: #FFFFFF;
+   display: flex;
+   flex-direction: column;
 }
 
 #header {
@@ -263,6 +265,16 @@ li {
    color: red;
    font-size: 11px;
    margin-left: 10px;
+}
+
+.preview {
+   width: 45%;
+   height: 300px;
+   margin: 20px, 0px, 0px, 20px;
+   padding: 10px;
+   border: 1px solid black;
+   overflow: hidden;
+   display: none;
 }
 
 #search {

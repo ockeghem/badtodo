@@ -1,16 +1,21 @@
 <?php
 require_once './common.php';
+
 $app->require_loggedin();
 $token = $app->get_token();
 ?><html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <title>Todo追加</title>
+<script src="./js/jquery-1.8.3.js"></script>
+<script src="./js/purify.min.js"></script>
+<script src="./js/preview.js"></script>
 </head>
 <body>
 <div id="top">
 <?php $menu = 2; require "menu.php"; ?>
-  <div id="newuser">
+  <div id="newtodo" style="display: flex;">
+    <div style="width: 55%">
     todo新規登録<BR>
     <?php $app->form("addtodo.php", true, array(), array("enctype" => "multipart/form-data"), true); ?>
     <table>
@@ -30,16 +35,19 @@ $token = $app->get_token();
     <td>添付ファイル</td><td><input type="file" name="attachment"></td>
     </tr>
     <tr>
-    <td>URL</td><td><input type="text" name="url" size="30" placeholder="補足URL（任意）"></td>
+    <td>URL</td><td><input type="text" name="url" size="30" placeholder="補足URL（任意）" id="input-url"></td>
     </tr>
     <tr>
-    <td>URL（タイトル）</td><td><input type="text" name="url_text" size="30" placeholder="URLの表示文字列（任意）"></td>
+    <td>URL（タイトル）</td><td><input type="text" name="url_text" id="input-linktext" size="30" placeholder="URLの表示文字列（任意）"></td>
     </tr>
     <tr>
     <td></td><td><input type="submit" value="登録"></td>
     </tr>
     </table>
     </form>
+    </div>
+    <div class="preview" id="preview">
+    </div>
   </div><!-- /#newuser -->
 <?php require "footer.php"; ?>
 </div>

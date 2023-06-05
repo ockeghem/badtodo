@@ -35,7 +35,7 @@ try {
 <div id="top">
 <?php require "menu.php"; ?>
   <div id="done">
-    添付フィルを削除しました<br>
+    添付ファイルを削除しました<br>
     <?php $app->a('todo.php', '戻る', true, array('item' => $item), array()); ?>  
   </div><!-- /#done -->
 <?php require "footer.php"; ?>
