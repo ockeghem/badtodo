@@ -30,17 +30,17 @@ Nginxのキャッシュがウザい場合がよくあります。キャッシュ
 
 ### Windows(PowerShell)
 ```
-PS C:badtodo> .\scripts\init.ps1
+PS C:badtodo> .\scripts\delcache.ps1
 ```
 
 ### Windows(CMD)
 ```
-C:badtodo> .\scripts\init.bat
+C:badtodo> .\scripts\delcache.bat
 ```
 
 ### Mac / Linux / WSL
 ```
-$ ./scripts/init.sh
+$ ./scripts/delcache.sh
 ```
 
 # 初期化用スクリプト
