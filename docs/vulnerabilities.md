@@ -4,7 +4,7 @@
 IPA [安全なウェブサイトの作り方第7版](https://www.ipa.go.jp/security/vuln/websecurity.html)で説明されている脆弱性を網羅しています。ウェブアプリケーションの脆弱性や脆弱性診断を学ぶ場合の第1歩としてはこれらの習得をお勧めします。
 
 - 1.1 [SQLインジェクション](https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_1.html)
-- 1.2 [OSコマンド・インジェクションン](https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_2.html)
+- 1.2 [OSコマンド・インジェクション](https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_2.html)
 - 1.3 [パス名パラメータの未チェック／ディレクトリ・トラバーサル](https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_3.html)
 - 1.4 [セッション管理の不備](https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_4.html)
 - 1.5 [クロスサイト・スクリプティング](https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_5.html)
