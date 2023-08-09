@@ -75,7 +75,7 @@ li {
 #menu {
    float:left;
    width:800px;
-   margin:10px 0;
+   margin-top: 10px;
    background-color:#333333;
 }
 
@@ -278,5 +278,5 @@ li {
 }
 
 #search {
-   float: right;
+   margin-left: auto;
 }
